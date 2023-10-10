@@ -1,0 +1,10 @@
+project(znet)
+cmake_minimum_required(VERSION 3.22)
+aux_source_directory(./src DIR_SRCS)
+add_definitions("-Wall -g")
+add_definitions(-std=c++11)
+# 指定生成目标文件
+add_executable(znet ${DIR_SRCS})
+target_include_directories(znet PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+

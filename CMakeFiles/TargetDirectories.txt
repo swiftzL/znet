@@ -1,0 +1,3 @@
+/Users/xx/project/c/znet/CMakeFiles/znet.dir
+/Users/xx/project/c/znet/CMakeFiles/edit_cache.dir
+/Users/xx/project/c/znet/CMakeFiles/rebuild_cache.dir

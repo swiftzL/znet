@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/xx/project/c/znet/build",
+  "command": "/usr/bin/clang++  -I/Users/xx/project/c/znet/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk   -Wall -g -std=c++11 -o CMakeFiles/znet.dir/src/Service.cpp.o -c /Users/xx/project/c/znet/src/Service.cpp",
+  "file": "/Users/xx/project/c/znet/src/Service.cpp"
+},
+{
+  "directory": "/Users/xx/project/c/znet/build",
+  "command": "/usr/bin/clang++  -I/Users/xx/project/c/znet/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk   -Wall -g -std=c++11 -o CMakeFiles/znet.dir/src/Worker.cpp.o -c /Users/xx/project/c/znet/src/Worker.cpp",
+  "file": "/Users/xx/project/c/znet/src/Worker.cpp"
+},
+{
+  "directory": "/Users/xx/project/c/znet/build",
+  "command": "/usr/bin/clang++  -I/Users/xx/project/c/znet/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk   -Wall -g -std=c++11 -o CMakeFiles/znet.dir/src/Znet.cpp.o -c /Users/xx/project/c/znet/src/Znet.cpp",
+  "file": "/Users/xx/project/c/znet/src/Znet.cpp"
+},
+{
+  "directory": "/Users/xx/project/c/znet/build",
+  "command": "/usr/bin/clang++  -I/Users/xx/project/c/znet/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk   -Wall -g -std=c++11 -o CMakeFiles/znet.dir/src/main.cpp.o -c /Users/xx/project/c/znet/src/main.cpp",
+  "file": "/Users/xx/project/c/znet/src/main.cpp"
+}
+]
