@@ -1,5 +1,12 @@
+
+#define _XOPEN_SOURCE 500
 #include<iostream>
 #include<Znet.h>
+#include "sys/socket.h"
+#include "fcntl.h"
+#include "netinet/in.h"
+#include "arpa/inet.h"
+#include "unistd.h"
 
 Znet* Znet::instance;
 
@@ -7,7 +14,7 @@ void Znet::startSocket()
 {
      this->socketWorker = new SocketWorker();
      socketWorker->Init();
-     socketThread = new std::thread(*socketThread);
+     socketThread = new std::thread(*socketWorker);
     
 }
 
@@ -45,6 +52,7 @@ int Znet::addConn(int fd, uint32_t id, Conn::TYPE type)
     conn->type = type;
     std::lock_guard<std::mutex>(this->connMutex);
     this->conns.emplace(fd,conn);
+    return 1;
 }
 
 std::shared_ptr<Conn> Znet::getConn(int fd)
@@ -57,7 +65,7 @@ std::shared_ptr<Conn> Znet::getConn(int fd)
 void Znet::removeConn(int fd)
 {
     std::lock_guard<std::mutex>(this->connMutex);
-    return conns.erase(fd)==1;
+    conns.erase(fd);
 }
 
 void Znet::Start() {
@@ -155,4 +163,38 @@ std::shared_ptr<BaseMsg> Znet::makeMsg(uint32_t source_id,char* buff,int len){
     msg->buff = std::shared_ptr<char>(buff);
     msg->size = len;
     return msg;
+}
+
+
+int Znet::listen_service(uint32_t port,uint32_t service_id){
+    int listenFd = socket(AF_INET,SOCK_STREAM,0);
+    if(listenFd <= 0){
+        std::cout<< "create socket is error " <<std::endl;
+        return -1;
+    }
+    fcntl(listenFd,F_SETFL,O_NONBLOCK);
+    sockaddr_in addr;   //创建地址结构
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(port);
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    //bind
+    int bind_r = bind(listenFd,(sockaddr*)&addr,sizeof(addr));
+    if(bind_r == -1) {
+        std::cout << "bind err " <<std::endl;
+        return -1;
+    }
+    int lr = listen(listenFd,64);
+    if(lr == -1){
+        std::cout << "listen err" <<std::endl;
+        return -1;
+    }
+    addConn(listenFd,service_id,Conn::LISTEN);
+    socketWorker->addEvent(listenFd);
+    return listenFd;
+}
+
+void Znet::closeFd(uint32_t fd){
+    removeConn(fd);
+    close(fd);
+    socketWorker->removeEvent(fd);
 }

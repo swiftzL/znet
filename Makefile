@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /root/cmake-3.22.0-rc1-linux-x86_64/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /root/cmake-3.22.0-rc1-linux-x86_64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xx/project/c/znet
+CMAKE_SOURCE_DIR = /home/znet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xx/project/c/znet
+CMAKE_BINARY_DIR = /home/znet
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/xx/project/c/znet
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/root/cmake-3.22.0-rc1-linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/root/cmake-3.22.0-rc1-linux-x86_64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xx/project/c/znet/CMakeFiles /Users/xx/project/c/znet//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/znet/CMakeFiles /home/znet//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/xx/project/c/znet/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/znet/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ src/Service.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/Service.cpp.s
 .PHONY : src/Service.cpp.s
 
+src/SocketWorker.o: src/SocketWorker.cpp.o
+.PHONY : src/SocketWorker.o
+
+# target to build an object file
+src/SocketWorker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/SocketWorker.cpp.o
+.PHONY : src/SocketWorker.cpp.o
+
+src/SocketWorker.i: src/SocketWorker.cpp.i
+.PHONY : src/SocketWorker.i
+
+# target to preprocess a source file
+src/SocketWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/SocketWorker.cpp.i
+.PHONY : src/SocketWorker.cpp.i
+
+src/SocketWorker.s: src/SocketWorker.cpp.s
+.PHONY : src/SocketWorker.s
+
+# target to generate assembly for a file
+src/SocketWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/SocketWorker.cpp.s
+.PHONY : src/SocketWorker.cpp.s
+
 src/Worker.o: src/Worker.cpp.o
 .PHONY : src/Worker.o
 
@@ -201,6 +225,30 @@ src/Znet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/Znet.cpp.s
 .PHONY : src/Znet.cpp.s
 
+src/luaApi.o: src/luaApi.cpp.o
+.PHONY : src/luaApi.o
+
+# target to build an object file
+src/luaApi.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/luaApi.cpp.o
+.PHONY : src/luaApi.cpp.o
+
+src/luaApi.i: src/luaApi.cpp.i
+.PHONY : src/luaApi.i
+
+# target to preprocess a source file
+src/luaApi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/luaApi.cpp.i
+.PHONY : src/luaApi.cpp.i
+
+src/luaApi.s: src/luaApi.cpp.s
+.PHONY : src/luaApi.s
+
+# target to generate assembly for a file
+src/luaApi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/znet.dir/build.make CMakeFiles/znet.dir/src/luaApi.cpp.s
+.PHONY : src/luaApi.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -237,12 +285,18 @@ help:
 	@echo "... src/Service.o"
 	@echo "... src/Service.i"
 	@echo "... src/Service.s"
+	@echo "... src/SocketWorker.o"
+	@echo "... src/SocketWorker.i"
+	@echo "... src/SocketWorker.s"
 	@echo "... src/Worker.o"
 	@echo "... src/Worker.i"
 	@echo "... src/Worker.s"
 	@echo "... src/Znet.o"
 	@echo "... src/Znet.i"
 	@echo "... src/Znet.s"
+	@echo "... src/luaApi.o"
+	@echo "... src/luaApi.i"
+	@echo "... src/luaApi.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

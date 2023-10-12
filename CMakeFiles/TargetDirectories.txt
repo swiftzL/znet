@@ -1,3 +1,3 @@
-/Users/xx/project/c/znet/CMakeFiles/znet.dir
-/Users/xx/project/c/znet/CMakeFiles/edit_cache.dir
-/Users/xx/project/c/znet/CMakeFiles/rebuild_cache.dir
+/home/znet/CMakeFiles/znet.dir
+/home/znet/CMakeFiles/edit_cache.dir
+/home/znet/CMakeFiles/rebuild_cache.dir

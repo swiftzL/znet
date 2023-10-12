@@ -4,6 +4,7 @@
 #include<Service.h>
 #include "SocketWorker.h"
 #include "Conn.h"
+#include<mutex>
 class Znet
 {
 public:
@@ -53,4 +54,6 @@ public:
     void pushGlobalQueue(std::shared_ptr<Service> srv);
     std::shared_ptr<BaseMsg> makeMsg(uint32_t source_id,char* msg,int len);
 
+    int listen_service(uint32_t port,uint32_t service_id);
+    void closeFd(uint32_t fd);
 };

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /root/cmake-3.22.0-rc1-linux-x86_64/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /root/cmake-3.22.0-rc1-linux-x86_64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/xx/project/c/znet
+CMAKE_SOURCE_DIR = /home/znet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/xx/project/c/znet
+CMAKE_BINARY_DIR = /home/znet
 
 # Include any dependencies generated for this target.
 include CMakeFiles/znet.dir/depend.make
@@ -72,76 +72,108 @@ include CMakeFiles/znet.dir/flags.make
 CMakeFiles/znet.dir/src/Service.cpp.o: CMakeFiles/znet.dir/flags.make
 CMakeFiles/znet.dir/src/Service.cpp.o: src/Service.cpp
 CMakeFiles/znet.dir/src/Service.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xx/project/c/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/znet.dir/src/Service.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Service.cpp.o -MF CMakeFiles/znet.dir/src/Service.cpp.o.d -o CMakeFiles/znet.dir/src/Service.cpp.o -c /Users/xx/project/c/znet/src/Service.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/znet.dir/src/Service.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Service.cpp.o -MF CMakeFiles/znet.dir/src/Service.cpp.o.d -o CMakeFiles/znet.dir/src/Service.cpp.o -c /home/znet/src/Service.cpp
 
 CMakeFiles/znet.dir/src/Service.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/Service.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xx/project/c/znet/src/Service.cpp > CMakeFiles/znet.dir/src/Service.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/Service.cpp > CMakeFiles/znet.dir/src/Service.cpp.i
 
 CMakeFiles/znet.dir/src/Service.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/Service.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xx/project/c/znet/src/Service.cpp -o CMakeFiles/znet.dir/src/Service.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/Service.cpp -o CMakeFiles/znet.dir/src/Service.cpp.s
+
+CMakeFiles/znet.dir/src/SocketWorker.cpp.o: CMakeFiles/znet.dir/flags.make
+CMakeFiles/znet.dir/src/SocketWorker.cpp.o: src/SocketWorker.cpp
+CMakeFiles/znet.dir/src/SocketWorker.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/znet.dir/src/SocketWorker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/SocketWorker.cpp.o -MF CMakeFiles/znet.dir/src/SocketWorker.cpp.o.d -o CMakeFiles/znet.dir/src/SocketWorker.cpp.o -c /home/znet/src/SocketWorker.cpp
+
+CMakeFiles/znet.dir/src/SocketWorker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/SocketWorker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/SocketWorker.cpp > CMakeFiles/znet.dir/src/SocketWorker.cpp.i
+
+CMakeFiles/znet.dir/src/SocketWorker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/SocketWorker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/SocketWorker.cpp -o CMakeFiles/znet.dir/src/SocketWorker.cpp.s
 
 CMakeFiles/znet.dir/src/Worker.cpp.o: CMakeFiles/znet.dir/flags.make
 CMakeFiles/znet.dir/src/Worker.cpp.o: src/Worker.cpp
 CMakeFiles/znet.dir/src/Worker.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xx/project/c/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/znet.dir/src/Worker.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Worker.cpp.o -MF CMakeFiles/znet.dir/src/Worker.cpp.o.d -o CMakeFiles/znet.dir/src/Worker.cpp.o -c /Users/xx/project/c/znet/src/Worker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/znet.dir/src/Worker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Worker.cpp.o -MF CMakeFiles/znet.dir/src/Worker.cpp.o.d -o CMakeFiles/znet.dir/src/Worker.cpp.o -c /home/znet/src/Worker.cpp
 
 CMakeFiles/znet.dir/src/Worker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/Worker.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xx/project/c/znet/src/Worker.cpp > CMakeFiles/znet.dir/src/Worker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/Worker.cpp > CMakeFiles/znet.dir/src/Worker.cpp.i
 
 CMakeFiles/znet.dir/src/Worker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/Worker.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xx/project/c/znet/src/Worker.cpp -o CMakeFiles/znet.dir/src/Worker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/Worker.cpp -o CMakeFiles/znet.dir/src/Worker.cpp.s
 
 CMakeFiles/znet.dir/src/Znet.cpp.o: CMakeFiles/znet.dir/flags.make
 CMakeFiles/znet.dir/src/Znet.cpp.o: src/Znet.cpp
 CMakeFiles/znet.dir/src/Znet.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xx/project/c/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/znet.dir/src/Znet.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Znet.cpp.o -MF CMakeFiles/znet.dir/src/Znet.cpp.o.d -o CMakeFiles/znet.dir/src/Znet.cpp.o -c /Users/xx/project/c/znet/src/Znet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/znet.dir/src/Znet.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/Znet.cpp.o -MF CMakeFiles/znet.dir/src/Znet.cpp.o.d -o CMakeFiles/znet.dir/src/Znet.cpp.o -c /home/znet/src/Znet.cpp
 
 CMakeFiles/znet.dir/src/Znet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/Znet.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xx/project/c/znet/src/Znet.cpp > CMakeFiles/znet.dir/src/Znet.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/Znet.cpp > CMakeFiles/znet.dir/src/Znet.cpp.i
 
 CMakeFiles/znet.dir/src/Znet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/Znet.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xx/project/c/znet/src/Znet.cpp -o CMakeFiles/znet.dir/src/Znet.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/Znet.cpp -o CMakeFiles/znet.dir/src/Znet.cpp.s
+
+CMakeFiles/znet.dir/src/luaApi.cpp.o: CMakeFiles/znet.dir/flags.make
+CMakeFiles/znet.dir/src/luaApi.cpp.o: src/luaApi.cpp
+CMakeFiles/znet.dir/src/luaApi.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/znet.dir/src/luaApi.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/luaApi.cpp.o -MF CMakeFiles/znet.dir/src/luaApi.cpp.o.d -o CMakeFiles/znet.dir/src/luaApi.cpp.o -c /home/znet/src/luaApi.cpp
+
+CMakeFiles/znet.dir/src/luaApi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/luaApi.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/luaApi.cpp > CMakeFiles/znet.dir/src/luaApi.cpp.i
+
+CMakeFiles/znet.dir/src/luaApi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/luaApi.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/luaApi.cpp -o CMakeFiles/znet.dir/src/luaApi.cpp.s
 
 CMakeFiles/znet.dir/src/main.cpp.o: CMakeFiles/znet.dir/flags.make
 CMakeFiles/znet.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/znet.dir/src/main.cpp.o: CMakeFiles/znet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/xx/project/c/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/znet.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/main.cpp.o -MF CMakeFiles/znet.dir/src/main.cpp.o.d -o CMakeFiles/znet.dir/src/main.cpp.o -c /Users/xx/project/c/znet/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/znet.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/znet.dir/src/main.cpp.o -MF CMakeFiles/znet.dir/src/main.cpp.o.d -o CMakeFiles/znet.dir/src/main.cpp.o -c /home/znet/src/main.cpp
 
 CMakeFiles/znet.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/znet.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/xx/project/c/znet/src/main.cpp > CMakeFiles/znet.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/znet/src/main.cpp > CMakeFiles/znet.dir/src/main.cpp.i
 
 CMakeFiles/znet.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/znet.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/xx/project/c/znet/src/main.cpp -o CMakeFiles/znet.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/znet/src/main.cpp -o CMakeFiles/znet.dir/src/main.cpp.s
 
 # Object files for target znet
 znet_OBJECTS = \
 "CMakeFiles/znet.dir/src/Service.cpp.o" \
+"CMakeFiles/znet.dir/src/SocketWorker.cpp.o" \
 "CMakeFiles/znet.dir/src/Worker.cpp.o" \
 "CMakeFiles/znet.dir/src/Znet.cpp.o" \
+"CMakeFiles/znet.dir/src/luaApi.cpp.o" \
 "CMakeFiles/znet.dir/src/main.cpp.o"
 
 # External object files for target znet
 znet_EXTERNAL_OBJECTS =
 
 znet: CMakeFiles/znet.dir/src/Service.cpp.o
+znet: CMakeFiles/znet.dir/src/SocketWorker.cpp.o
 znet: CMakeFiles/znet.dir/src/Worker.cpp.o
 znet: CMakeFiles/znet.dir/src/Znet.cpp.o
+znet: CMakeFiles/znet.dir/src/luaApi.cpp.o
 znet: CMakeFiles/znet.dir/src/main.cpp.o
 znet: CMakeFiles/znet.dir/build.make
 znet: CMakeFiles/znet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/xx/project/c/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable znet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/znet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable znet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/znet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +185,6 @@ CMakeFiles/znet.dir/clean:
 .PHONY : CMakeFiles/znet.dir/clean
 
 CMakeFiles/znet.dir/depend:
-	cd /Users/xx/project/c/znet && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/xx/project/c/znet /Users/xx/project/c/znet /Users/xx/project/c/znet /Users/xx/project/c/znet /Users/xx/project/c/znet/CMakeFiles/znet.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/znet && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/znet /home/znet /home/znet /home/znet /home/znet/CMakeFiles/znet.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/znet.dir/depend
 

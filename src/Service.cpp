@@ -2,6 +2,7 @@
 #include <Service.h>
 #include <iostream>
 #include<Znet.h>
+#include<luaApi.h>
 
 void Service::PushMsg(std::shared_ptr<BaseMsg> msg)
 {
@@ -31,11 +32,32 @@ std::shared_ptr<BaseMsg> Service::PopMsg()
 void Service::OnExit()
 {
     std::cout << "on exit" << id << std::endl;
+    lua_getglobal(luaState,"OnExit");
+    int ok = lua_pcall(luaState,0,0,0);
+    if(ok != 0){
+        std::cout << "lua call onExit is fail reason"<<lua_tostring(luaState,-1)<<std::endl;
+    }
+    lua_close(luaState);
 }
 
 void Service::OnInit()
 {
     std::cout << "on init" << this->id << std::endl;
+    luaState = luaL_newstate();
+    LuaApi::Register(luaState); 
+    luaL_openlibs(luaState);
+    std::string file_name = "/home/znet/service/"+*type+"/init.lua";
+    int ok = luaL_dofile(luaState,file_name.data());
+    if(ok == 1){
+        std::cout<<"lood lua file is error file_name is" << file_name<<std::endl;
+        return;
+    }
+    lua_getglobal(luaState,"OnInit");
+    lua_pushinteger(luaState,id);
+    ok = lua_pcall(luaState,1,0,0);
+    if(ok != 0){
+        std::cout << "lua call onInit is fail reason"<<lua_tostring(luaState,-1)<<std::endl;
+    }
 }
 
 void Service::OnMsg(std::shared_ptr<BaseMsg> msg)

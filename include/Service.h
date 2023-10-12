@@ -5,10 +5,19 @@
 #include<thread>
 #include<Msg.h>
 #include<string>
+#include<mutex>
+
+extern "C"{
+    #include "lua.h"
+    #include "lauxlib.h"
+    #include "lualib.h"
+};
 
 #pragma once
 class Service
 {
+private:
+    lua_State* luaState;
 public:
     uint32_t id;
     std::shared_ptr<std::string> type;
